@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="HeaderEffects/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="demo1.css">
+    <link rel="stylesheet" type="text/css" href="style81.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Zeus</title>
+    <script>
+        
+        $(document).ready(function(){
+          $(".scrolld, .scroll0, .scroll, .scroll1, .scroll2, .scroll3, .scroll4, .scroll5, .scroll6, .scrollup").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 1000, function(){
+                window.location.hash = hash;
+              });
+            } 
+          });
+            $(".scroll7").on('click', function(event) {
+                if(this.hash!=="") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+        
+        //Overlay Panel
+        $('#cell1').click(function(e){
+            e.stopPropagation();
+            $(".overlay-panel").toggleClass('panel-switch')
+        });
+        $('body').click(function(e){
+            if($('.overlay-panel').hasClass('panel-switch')){
+                $(".overlay-panel").toggleClass('panel-switch')
+            }
+        })
+        
+    </script>
+    <script src="modernizr.custom.js"></script>
+    <script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+<div class="main-container">
+    
+    <!-- Dynamic Header -->
+    <header id="ha-header" class="ha-header">
+            <h1><span><a href="#slideshow-container" class="scroll0">ZEUS</a></span></h1>
+            <nav>
+                <a href="#description-container" class="scroll">About Us</a>
+                <a href="#service-container" class="scroll1">Services</a>
+                <a href="#project-container" class="scroll2">Projects</a>
+                <a href="#team-container" class="scroll3">Team</a>
+                <a href="#assestment-container" class="scroll4">Assestments</a>
+                <a href="#contact-container" class="scroll5">Contact</a>
+                <button id="btn-search" class="btn btn--search" style="display: inline-block; color: #fff; padding-bottom: 3px; vertical-align: middle; padding-right: 10px; padding-top: 12px;"><svg class="icon icon--search"><use xlink:href="#icon-search"></use></svg></button>
+                <div class="language">
+                    <button class="btn_language" onclick="Change_language()">EN</button>
+                    <div class="language-content" id="language">
+                        <a href="#main-container"><img src="uk.png" id="uk">English</a>
+                        <a href="index_pl.html"><img src="poland.png" id="poland">Polish</a>
+                    </div>
+                </div>
+                <!--<input type="search" name="search" id="search" placeholder="Search...">-->
+            </nav>
+    </header>
+    <!-- Dynamic Header -->
+    
+    <!-- Image Slide Show -->
+    <div class="slideshow-container" id="slideshow-container">
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image1.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>It's a creativity and fantasy embodied in every element</p>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image2.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>It's the order and balance in web-design.</p>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image3.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>It's a linearity and minimalism in details.</p>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image4.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>It's the depth and saturation of the web space.</p>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image5.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>It's the realization of absolutely all your bold ideas.</p>
+            </div>
+        </div>
+        
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        
+        <div style="text-align:center"><span class="scroll_down"><a href="#description-container" class="scroll">SCROLL DOWN</a></span></div>
+        
+    </div>
+    </section>
+      
+    <!-- Image Slide Show -->
+    <!-- Description container -->
+    <div class="description-container" id="description-container">
+        <img src="Description.jpg">
+        <div class="logos">ZEUS
+            <div class="overlay">
+                <div class="overlay-text">It's an international IT-company, which specialize to development of software solutions, phased implementation, testing or consulting in absolutely different computer areas. We are creating and development web-design, web-applications, mobile apps, mobile app design, artificial intelligence systems and software for them. We also development of sofware for: robots, augmented reality systems, virtual reality systems, enterprise and desktop applications. We also hold consultations in SEM, SEO and SMM.</div>
+            </div>
+        </div>       
+        <div style="text-align:center"><span class="scroll_downd"><a href="#service-container" class="scrolld">SCROLL DOWN FOR VIEW ALL OUR SERVICES</a></span></div>
+    </div>
+    
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src = "logosDistort.min.js"></script>
+    
+    <!-- Description container -->
+    
+    <!-- Service container -->
+    <section class="social-waypoint" data-animate-down="social-show" data-animate-up="social-hide">
+    <section class="ha-waypoint" data-animate-down="ha-header-show" data-animate-up="ha-header-hide">
+    <div class="service-container" id="service-container">
+        <img src="services.jpeg">
+        <div class="service-section">
+            <div class="service-menu">
+            
+                <div class="row">
+                    <div class="cell" id="cell1">
+                        <img src="Service-menu-icons/web-dev.png" alt="Web-development">
+                        <div class="cell-text">Web Development</div>
+                    </div>
+                    <div class="cell" id="cell2">
+                        <img src="Service-menu-icons/web-des.png" alt="Web Design">
+                        <div class="cell-text">Web Design</div>
+                    </div>
+                    <div class="cell" id="cell3">
+                        <img src="Service-menu-icons/mobile.png" alt="Mobile App Development">
+                        <div class="cell-text">Mobile App Development</div>
+                    </div>
+                    <div class="cell" id="cell4">
+                        <img src="Service-menu-icons/app-design.png" alt="Mobile App Design">
+                        <div class="cell-text">Mobile App Design</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="cell" id="cell5">
+                        <img src="Service-menu-icons/AI.png" alt="Artificial Intelligence">
+                        <div class="cell-text">Artificial Intelligene</div>
+                    </div>
+                    <div class="cell" id="cell6">
+                        <img src="Service-menu-icons/VR.png" alt="VR Development">
+                        <div class="cell-text">Virtual Reality Development</div>
+                    </div>
+                    <div class="cell" id="cell7">
+                        <img src="Service-menu-icons/AR.png" alt="AR Development">
+                        <div class="cell-text">Augmented Reality Development</div>
+                    </div>
+                    <div class="cell" id="cell8">
+                        <img src="Service-menu-icons/enterprise.png" alt="Enterprise Development">
+                        <div class="cell-text">Enterprise Development</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row-click">
+                <div class="row-text">Click for view all details</div>
+            </div>
+        </div>
+    </div>
+    <!-- Service container -->
+        
+    <!-- Containters with appearance navigation panel's content -->
+    <div id="myNav1" class="overlay-panel">
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
+        <div class="overlay-panel-content">
+            <img src="Service-menu-icons/web-dev.png" alt="Web-development" width="125" height="125">
+            <h2>Web-development</h2>
+            <div class="nav-description">Our corporation can create and fully develop from scratch any project, which have of different difficulty level. We're always open to any offers and wants and also always listen of your personal wishes.</div>
+            <h3>Our Services</h3>
+            <ul>
+                <li>Generally consultating</li>
+                <li>Fixing of all problems</li>
+                <li>Development of separately part of web-service or project</li>
+                <li>Development of web-applications</li>
+                <li>Development of RWD-addition</li>
+                <li>Development of full project base on prepared web-design</li>
+                <li style="border-bottom: none">Development project from scratch with create of web-design</li>
+            </ul>
+            <a href="#" class="mynav-button">Order Service</a>
+        </div>
+    </div> 
+        
+    <div id="myNav2" class="overlay-panel2">
+        <a href="javascript:void(0)" class="closebtn2">&times;</a>
+        <div class="overlay-panel-content2">
+            <img src="Service-menu-icons/web-des.png" alt="Web-design" width="125" height="125">
+            <h2>Web-design</h2>
+            <div class="nav-description2">We can create of professionaly prepared web-design for any projects in different fields and on any themes. You can simple say about your wishes, intiatives, preferences and we will try to complete their.</div>
+            <h3>Our Services</h3>
+            <ul>
+                <li>Generally consulting</li>
+                <li>Fixing of all problems relation with completed service but problematic</li>
+                <li>Create of web-design for separately part of web-service</li>
+                <li>Create of web-design for full service from scratch without development</li>
+                <li style="border-bottom: none">Develop of project from scratch with web-development and web-design</li>
+            </ul>
+            <a href="#" class="mynav-button2">Order Service</a>
+        </div>
+    </div>
+        
+    <div id="myNav3" class="overlay-panel3">
+        <a href="javascript:void(0)" class="closebtn3">&times;</a>
+        <div class="overlay-panel-content3">
+            <img src="Service-menu-icons/mobile.png" alt="Mobile App Development" width="125" height="125">
+            <h2>Mobile App Development</h2>
+            <div class="nav-description3">Our corporation can create of professionally prepared mobile applications. We develop of different apps, from small customize representative apps for companies to big and compicable financial apps, which need of big data.</div>
+            <h3>Our Services</h3>
+            <ul>
+                <li>Generally consultating</li>
+                <li>Fixing of all problems</li>
+                <li>Development of separately part of mobile app</li>
+                <li>Development of mobile apps</li>
+                <li>Development of full project base on prepared UX and UI-design</li>
+                <li style="border-bottom: none">Development project from scratch with create of UX and UI design</li>
+            </ul>
+            <a href="#" class="mynav-button3">Order Service</a>
+        </div>
+    </div>
+        
+    <div id="myNav4" class="overlay-panel4">
+        <a href="javascript:void(0)" class="closebtn4">&times;</a>
+        <div class="overlay-panel-content4">
+            <img src="Service-menu-icons/app-design.png" alt="Mobile App Design" width="125" height="125">
+            <h2>Mobile App Design</h2>
+            <div class="nav-description4">Our corporation can create of professionally prepared mobile design special for different apps. We can create of the most modern and innovation UX(User Expericence) and UI(User Interface) design according to the latest trends and popularity</div>
+            <h3>Our Services</h3>
+            <ul>
+                <li>Generally consultating</li>
+                <li>Fixing of all problems</li>
+                <li>Create of separately part of generally design for mobile app</li>
+                <li>Create of professionally prepared UX and UI-design from scratch</li>
+                <li>Create of very innovation, extraordinary and incredible design for your app</li>
+                <li style="border-bottom: none">Development project from scratch with creation design and implementation his</li>
+            </ul>
+            <a href="#" class="mynav-button4">Order Service</a>
+        </div>
+    </div>
+        
+    <div id="myNav5" class="overlay-panel5">
+        <a href="javascript:void(0)" class="closebtn5">&times;</a>
+        <div class="overlay-panel-content5">
+            <img src="Service-menu-icons/AI.png" alt="Artificial Intelligence" width="125" height="125">
+            <h2>Artificial Intelligence</h2>
+            <div class="nav-description5">No so long ago, our corporation open of absolutely new department which fully specialized on development of software for any artificial intelligence systems. We hired a job in this "AI-Department" only the best staff from around the world. Well, at now, we pay the greatest attention to this department, thus you can use of our innovation vision for realize of any projects</div>
+            <h3>Our Services</h3>
+            <ul>
+                <li>Generally consultating</li>
+                <li>Fixing of all problems</li>
+                <li>Creation of software for deep-learning systems</li>
+                <li>Creation of software for neural-network systems</li>
+                <li>Creation of software for natural language processing systems</li>
+                <li>Creation of software for robotical perceptions</li>
+                <li>Creation of software for robotical motion of different AI-systems</li>
+                <li>Creation of software for chatbots in different platforms</li>
+                <li>Creation of software for any AI-vehicles, equipments and devices</li>
+                <li>Creation of software for humanoid robots and robotical systems with any sizes and tasks</li>
+                <li style="border-bottom: none">Creation of fully-prepared software for any robotical system from scratch</li>
+            </ul>
+            <a href="#" class="mynav-button5">Order Service</a>
+        </div>
+    </div>
+        
+    <div id="myNav6" class="overlay-panel6">
+        <a href="javascript:void(0)" class="closebtn6">&times;</a>
+        <div class="overlay-panel-content6">
+            <img src="Service-menu-icons/VR.png" alt="Virtual Reality Development" width="125" height="125">
+            <h2>VIrtual Reality Development</h2>
+            <div class="nav-description6">At now, in modern and innovation world virtual reality become the integral part of our casual life. Of course, we watch closely to this technology, and we have a special programmers-team which specialized on this area. This team is responsive and creative for any your personally desire</div>
+            <h3>Our Services</h3>
+            <ul>
+                <li>Generally consultating</li>
+                <li>Fixing of all problems</li>
+                <li>Creation of a very special software in any areas for your selected VR helmet</li>
+                <li>Creation of different software for educational, medical, security and other areas</li>
+                <li>Creation of software for VR-interactive between users</li>
+                <li style="border-bottom: none">Creation of full-version of VR-software from scratch</li>
+            </ul>
+            <a href="#" class="mynav-button6">Order Service</a>
+        </div>
+    </div>
+        
+    <div id="myNav7" class="overlay-panel7">
+        <a href="javascript:void(0)" class="closebtn7">&times;</a>
+        <div class="overlay-panel-content7">
+            <img src="Service-menu-icons/AR.png" alt="Augmented Reality Development" width="125" height="125">
+            <h2>Augmented Reality Development</h2>
+            <div class="nav-description7">As well as VR-revolution to become closer to us, as AR-revolution become the new conception of interaction with modern and newest interfaces. Our programmers-team, specialized to VR also interest on AR-technologies, therefore they can help to you realize of your dreams and wants. We also are official software development partners for Microsoft Corporation™, specially for their AR-device "Microsoft Hololens" for which, we create of software and help to them improve it.</div>
+            <h3>Our Services</h3>
+            <ul>
+                <li>Generally consultating</li>
+                <li>Fixing of all problems</li>
+                <li>Creation of a very special software in any areas for your selected AR garniture</li>
+                <li>Creation of different software for educational, medical, security and other areas</li>
+                <li>Creation of software for AR-interactive between users</li>
+                <li>Creation of any software for "Microsoft Hololens" garniture</li>
+                <li>Porting of any apps from mobile devices to AR interface</li>
+                <li style="border-bottom: none">Creation of full-version of AR-software from scratch</li>
+            </ul>
+            <a href="#" class="mynav-button7">Order Service</a>
+        </div>
+    </div>
+        
+    <div id="myNav8" class="overlay-panel8">
+        <a href="javascript:void(0)" class="closebtn8">&times;</a>
+        <div class="overlay-panel-content8">
+            <img src="Service-menu-icons/enterprise.png" alt="Enterprise Development" width="125" height="125">
+            <h2>Enterprise Development</h2>
+            <div class="nav-description8">In the 21st century big business need of a modern technological solutions for generally increase of efficiency, improve of technological process, decrease speed of operations and fully automatization unnecessary process. Thereby, every year we notate, that more coprorations need to implement of big-data, iot and special marketing tools for analyze of thousands gigabytes data about consumers. We can to help you with these complicable tasks</div>
+            <h3>Our Services</h3>
+            <ul>
+                <li>Generally consultating</li>
+                <li>Fixing of all problems</li>
+                <li>Creation of any corporation's software for different purposes</li>
+                <li>Optimizing of all process in your business with help our software solutions</li>
+                <li>Creation big-data and IoT solutions for your business</li>
+                <li style="border-bottom: none">Creation of special merketing tools for analyze your consumers</li>
+            </ul>
+            <a href="#" class="mynav-button8">Order Service</a>
+        </div>
+    </div>
+    <!-- Containters with appearance navigation panel's content -->
+    
+    <!-- Project container -->
+    <div class="project-container" id="project-container">
+        
+    </div>
+    <!-- Project container -->
+    
+    <!-- Team container -->
+    <div class="team-container" id="team-container">
+        <h1 style="text-align: center">Team</h1>
+    </div>
+    <!-- Team container -->
+    
+    <!-- Assestment container -->
+    <div class="assestment-container" id="assestment-container">
+        <h1 style="text-align: center">Assestment</h1>
+    </div>
+    <!-- Assestment container -->
+    
+    <!-- Contact container -->
+    <div class="contact-container" id="contact-container">
+        <h1 style="text-align:center">Contact</h1>
+    </div>
+        </section>
+    </section>
+    <!-- Contact container -->
+    
+    <!-- Footer -->
+    <div class="footer" id="footer">
+        <h1 style="text-align:center">Footer</h1>
+        <div style="text-align:center"><span class="scroll_up"><a href="#slideshow-container" class="scroll7">BACK HOME</a></span></div>
+    </div>
+    <section class="social-waypoint" data-animate-down="social-hide" data-animate-up="social-show"></section>
+    <section class="ha-waypoint" data-animate-down="ha-header-hide" data-animate-up="ha-header-show"></section>
+    <!-- Footer -->
+    
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src = "logosDistort.min.js"></script>
+    </div>
+    
+    <!-- Dynamic Search Panel -->
+    
+    <main class="main-wrap">
+            <header class="codrops-header">
+                <div class="search-wrap">
+                    <button id="btn-search" class="btn btn--search"><svg class="icon icon--search"><use xlink:href="#icon-search"></use></svg></button>
+                </div>
+            </header>
+        </main>
+    
+    <svg class="hidden">
+			<defs>
+				<symbol id="icon-arrow" viewBox="0 0 24 24">
+					<title>arrow</title>
+					<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+				</symbol>
+				<symbol id="icon-drop" viewBox="0 0 24 24">
+					<title>drop</title>
+					<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+				</symbol>
+				<symbol id="icon-search" viewBox="0 0 24 24">
+					<title>search</title>
+					<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+				</symbol>
+				<symbol id="icon-cross" viewBox="0 0 24 24">
+					<title>cross</title>
+					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+				</symbol>
+			</defs>
+		</svg>
+    
+        <div class="search">
+            <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
+            <form class="search__form" action="">
+                <div class="search__form-inner">
+                    <input class="search__input" name="search" type="search" placeholder="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+                <span class="search__info">Hit enter to search or esc to close</span>
+            </form>
+        </div>
+    
+    <!-- Social Media Buttons in sidebar -->
+    <div class="social-media-icons" id="social-media-icons">
+        <ul>
+            <li><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://twitter.com"><img src="twitter.png" alt="Twitter"></a></li>
+            <li><a href="https://www.linkedin.com/uas/login"><img src="linkedin.png" alt="Linkedin"></a></li>
+            <li><a href="https://plus.google.com"><img src="google-plus.png" alt="GooglePlus"></a></li>
+            <li><a href="https://www.instagram.com/?hl=en"><img src="instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://wordpress.org"><img src="wordpress.png" alt="WordPress"></a></li>
+            <li><a href="https://www.pinterest.com"><img src="pinterest.png" alt="Pinterest"></a></li>
+            <li><a href="https://www.youtube.com"><img src="youtube.png" alt="YouTube"></a></li>
+            <li><div class="up_button"><a href="#slideshow-container" class="scrollup">↑</a></div></li>
+        </ul>
+    </div>
+    
+    <!-- Script connect -->
+    <script src="index.js" type="text/javascript"></script>
+    <script src="demo81.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="waypoints.min.js"></script>
+    <script>
+			var $head = $( '#social-media-icons' );
+			$( '.social-waypoint' ).each( function(i) {
+				var $el = $( this ),
+					animClassDown = $el.data( 'animateDown' ),
+					animClassUp = $el.data( 'animateUp' );
+
+				$el.waypoint( function( direction ) {
+					if( direction === 'down' && animClassDown ) {
+						$head.attr('class', 'social-media-icons ' + animClassDown);
+					}
+					else if( direction === 'up' && animClassUp ){
+						$head.attr('class', 'social-media-icons ' + animClassUp);
+					}
+				}, { offset: '100%' } );
+			} );
+        
+            var $head1 = $( '#ha-header' );
+			$( '.ha-waypoint' ).each( function(i) {
+				var $el1 = $( this ),
+					animClassDown = $el1.data( 'animateDown' ),
+					animClassUp = $el1.data( 'animateUp' );
+
+				$el1.waypoint( function( direction ) {
+					if( direction === 'down' && animClassDown ) {
+						$head1.attr('class', 'ha-header ' + animClassDown);
+					}
+					else if( direction === 'up' && animClassUp ){
+						$head1.attr('class', 'ha-header ' + animClassUp);
+					}
+				}, { offset: '100%' } );
+			} );
+        
+            //Dynamic Logo
+            var particles = true,
+            particleDensity,
+
+            options = {
+            effectWeight: 1,
+            outerBuffer: 1.08,
+            elementDepth: 220
+            };
+
+            $(document).ready(function() {
+
+            $("#dem").logosDistort(options);
+
+            if (particles) {
+               particleDensity = window.outerWidth * 15;
+               if (particleDensity < 13000) {
+                  particleDensity = 13000;
+               } else if (particleDensity > 20000) {
+                  particleDensity = 20000;
+               }
+               return $('#particle').particleground({
+                  dotColor: '#1ec5ee',
+                  lineColor: '#0a4e90',
+                  density: particleDensity.toFixed(0),
+                  parallax: false
+               });
+            }
+            });
+        
+            //Overlay Panel
+            $('#cell1').click(function(e) {
+                e.stopPropagation();
+                $(".overlay-panel").toggleClass('panel-switch') });
+                $('body').click(function(e) {
+                    if ($('.overlay-panel').hasClass('panel-switch')) {
+                        $(".overlay-panel").toggleClass('panel-switch')}
+            })
+                
+            $('#cell2').click(function(e) {
+                e.stopPropagation();
+                $(".overlay-panel2").toggleClass('panel-switch2') });
+                $('body').click(function(e) {
+                    if ($('.overlay-panel2').hasClass('panel-switch2')) {
+                        $(".overlay-panel2").toggleClass('panel-switch2')}
+            })
+                
+            $('#cell3').click(function(e) {
+                e.stopPropagation();
+                $(".overlay-panel3").toggleClass('panel-switch3') });
+                $('body').click(function(e) {
+                    if ($('.overlay-panel3').hasClass('panel-switch3')) {
+                        $(".overlay-panel3").toggleClass('panel-switch3')}
+            })
+                
+            $('#cell4').click(function(e) {
+                e.stopPropagation();
+                $(".overlay-panel4").toggleClass('panel-switch4') });
+                $('body').click(function(e) {
+                    if ($('.overlay-panel4').hasClass('panel-switch4')) {
+                        $(".overlay-panel4").toggleClass('panel-switch4')}
+            })
+                
+            $('#cell5').click(function(e) {
+                e.stopPropagation();
+                $(".overlay-panel5").toggleClass('panel-switch5') });
+                $('body').click(function(e) {
+                    if ($('.overlay-panel5').hasClass('panel-switch5')) {
+                        $(".overlay-panel5").toggleClass('panel-switch5')}
+            })
+                
+            $('#cell6').click(function(e) {
+                e.stopPropagation();
+                $(".overlay-panel6").toggleClass('panel-switch6') });
+                $('body').click(function(e) {
+                    if ($('.overlay-panel6').hasClass('panel-switch6')) {
+                        $(".overlay-panel6").toggleClass('panel-switch6')}
+            })
+                
+            $('#cell7').click(function(e) {
+                e.stopPropagation();
+                $(".overlay-panel7").toggleClass('panel-switch7') });
+                $('body').click(function(e) {
+                    if ($('.overlay-panel7').hasClass('panel-switch7')) {
+                        $(".overlay-panel7").toggleClass('panel-switch7')}
+            })
+                
+            $('#cell8').click(function(e) {
+                e.stopPropagation();
+                $(".overlay-panel8").toggleClass('panel-switch8') });
+                $('body').click(function(e) {
+                    if ($('.overlay-panel8').hasClass('panel-switch8')) {
+                        $(".overlay-panel8").toggleClass('panel-switch8')}
+            })
+		</script>
+</body>
+</html>

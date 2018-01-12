@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="HeaderEffects/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="demo1.css">
+    <link rel="stylesheet" type="text/css" href="style81.css">
+    <title>Zeus</title>
+    <script>
+        
+        $(document).ready(function(){
+          $(".scroll0, .scroll, .scroll1, .scroll2, .scroll3, .scroll4, .scroll5, .scroll6").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 1000, function(){
+                window.location.hash = hash;
+              });
+            } 
+          });
+            $(".scroll7").on('click', function(event) {
+                if(this.hash!=="") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+        /*
+        $(document).ready(function() {
+            $(".scroll_down").click(function() {
+               $("body").scrollTop(790);
+            });
+            $(".scroll_down1").click(function() {
+                $("body").scrollTop(1580);
+            });
+            $(".scroll_down2").click(function() {
+               $("body").scrollTop(2370); 
+            });
+            $(".scroll_down3").click(function() {
+               $("body").scrollTop(3160); 
+            });
+            $(".scroll_down4").click(function() {
+               $("body").scrollTop(3950); 
+            });
+            $(".scroll_down5").click(function() {
+                $("body").scrollTop(4740);
+            });
+            $(".scroll_down6").click(function() {
+                $("body").scrollTop(5530);
+            });
+            */
+            /*
+            $(".scroll_down1").click(function() {
+                if (($("div").hasClass("description-container"))===true) {
+                    $("body").scrollTop(1580);
+                } else (($("div").hasClass("service-container"))===true) {
+                    $("body").scrollTop(2370);
+                } else (($("div").hasClass("project-container"))===true) {
+                    $("body").scrollTop(3160);
+                } else (($("div").hasClass("team-container"))===true) {
+                    $("body").scrollTop(3950);
+                } else (($("div").hasClass("assestment-container"))===true) {
+                    $("body").scrollTop(4740);
+                } else (($("div").hassClass("contact-container"))===true) {
+                    $("body").scrollTop(5530);
+                }
+            });*/
+        
+        /* Dynamic Header: */
+        /*Dynamic Header */
+        
+    </script>
+    <script src="modernizr.custom.js"></script>
+    <script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+<div class="main-container">
+    
+    <!-- Dynamic Header -->
+    <header id="ha-header" class="ha-header">
+            <h1><span><a href="#slideshow-container" class="scroll0">ZEUS</a></span></h1>
+            <nav>
+                <a href="#description-container" class="scroll">O Nas</a>
+                <a href="#service-container" class="scroll1">Usługi</a>
+                <a href="#project-container" class="scroll2">Projekty</a>
+                <a href="#team-container" class="scroll3">Zespół</a>
+                <a href="#assestment-container" class="scroll4">Opinie</a>
+                <a href="#contact-container" class="scroll5">Kontakt</a>
+                <button id="btn-search" class="btn btn--search" style="display: inline-block; color: #fff; padding-bottom: 3px; vertical-align: middle; padding-right: 10px; padding-top: 12px;"><svg class="icon icon--search"><use xlink:href="#icon-search"></use></svg></button>
+                <div class="language">
+                    <button class="btn_language" onclick="Change_language()">PL</button>
+                    <div class="language-content" id="language">
+                        <a href="index.html"><img src="uk.png" id="uk">English</a>
+                        <a href="#main-container"><img src="poland.png" id="poland">Polish</a>
+                    </div>
+                </div>
+                <!--<input type="search" name="search" id="search" placeholder="Search...">-->
+            </nav>
+    </header>
+    <!-- Dynamic Header -->
+    
+    <!-- Image Slide Show -->
+    <div class="slideshow-container" id="slideshow-container">
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image1.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>To jest kreatywność i wyobrażnia realizowana w każdym elemencie</p>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image2.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>To jest porządek i równowaga w web-designu</p>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image3.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>To jest liniowość i minimalism w szczegółach</p>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image4.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>To głębia i nasycenie przestrzeni internetowej</p>
+                <p></p>
+            </div>
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="ImageSlideShow/Image5.jpg">
+            <div class="text">
+                <h1>ZEUS</h1>
+                <p>To jest realizacja absolutnie wszyskich twoich najbarzdziej śmiałych pomysłów</p>
+            </div>
+        </div>
+        
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        
+        <div style="text-align:center"><span class="scroll_down"><a href="#description-container" class="scroll">PREWIŃ W DÓŁ</a></span></div>
+        
+    </div>
+    </section>
+      
+    <!-- Image Slide Show -->
+    
+    <!-- Description container -->
+    <div class="description-container" id="description-container">
+        <h1 style="text-align:center">Opis</h1>
+    </div>
+    <!-- Description container -->
+    
+    <!-- Service container -->
+    <section class="social-waypoint" data-animate-down="social-show" data-animate-up="social-hide">
+    <section class="ha-waypoint" data-animate-down="ha-header-show" data-animate-up="ha-header-hide">
+    <div class="service-container" id="service-container">
+        <h1 style="text-align:center">Usługi</h1>
+    </div>
+    <!-- Service container -->
+    
+    <!-- Project container -->
+    <div class="project-container" id="project-container">
+        <h1 style="text-align:center">Projekty</h1>
+    </div>
+    <!-- Project container -->
+    
+    <!-- Team container -->
+    <div class="team-container" id="team-container">
+        <h1 style="text-align: center">Zespół</h1>
+    </div>
+    <!-- Team container -->
+    
+    <!-- Assestment container -->
+    <div class="assestment-container" id="assestment-container">
+        <h1 style="text-align: center">Opinie</h1>
+    </div>
+    <!-- Assestment container -->
+    
+    <!-- Contact container -->
+    <div class="contact-container" id="contact-container">
+        <h1 style="text-align:center">Kontakt</h1>
+    </div>
+        </section>
+    </section>
+    <!-- Contact container -->
+    
+    <!-- Footer -->
+    <div class="footer" id="footer">
+        <h1 style="text-align:center">Footer</h1>
+        <div style="text-align:center"><span class="scroll_up"><a href="#slideshow-container" class="scroll7">WRÓCIĆ DO DOMU</a></span></div>
+    </div>
+    <section class="social-waypoint" data-animate-down="social-hide" data-animate-up="social-show"></section>
+    <section class="ha-waypoint" data-animate-down="ha-header-hide" data-animate-up="ha-header-show"></section>
+    <!-- Footer -->
+    </div>
+    
+    <!-- Dynamic Search Panel -->
+    
+    <main class="main-wrap">
+            <header class="codrops-header">
+                <div class="search-wrap">
+                    <button id="btn-search" class="btn btn--search"><svg class="icon icon--search"><use xlink:href="#icon-search"></use></svg></button>
+                </div>
+            </header>
+        </main>
+    
+    <svg class="hidden">
+			<defs>
+				<symbol id="icon-arrow" viewBox="0 0 24 24">
+					<title>arrow</title>
+					<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+				</symbol>
+				<symbol id="icon-drop" viewBox="0 0 24 24">
+					<title>drop</title>
+					<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+				</symbol>
+				<symbol id="icon-search" viewBox="0 0 24 24">
+					<title>search</title>
+					<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+				</symbol>
+				<symbol id="icon-cross" viewBox="0 0 24 24">
+					<title>cross</title>
+					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+				</symbol>
+			</defs>
+		</svg>
+    
+        <div class="search">
+            <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
+            <form class="search__form" action="">
+                <div class="search__form-inner">
+                    <input class="search__input" name="search" type="search" placeholder="szukaj" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+                <span class="search__info">Hit enter to search or esc to close</span>
+            </form>
+        </div>
+    
+    <!-- Social Media Buttons in sidebar -->
+    <div class="social-media-icons" id="social-media-icons">
+        <ul>
+            <li><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://twitter.com"><img src="twitter.png" alt="Twitter"></a></li>
+            <li><a href="https://www.linkedin.com/uas/login"><img src="linkedin.png" alt="Linkedin"></a></li>
+            <li><a href="https://plus.google.com"><img src="google-plus.png" alt="GooglePlus"></a></li>
+            <li><a href="https://www.instagram.com/?hl=en"><img src="instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://wordpress.org"><img src="wordpress.png" alt="WordPress"></a></li>
+            <li><a href="https://www.pinterest.com"><img src="pinterest.png" alt="Pinterest"></a></li>
+            <li><a href="https://www.youtube.com"><img src="youtube.png" alt="YouTube"></a></li>
+        </ul>
+    </div>
+    
+    <!-- Script connect -->
+    <script src="index.js" type="text/javascript"></script>
+    <script src="demo81.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="waypoints.min.js"></script>
+    <script>
+			var $head = $( '#social-media-icons' );
+			$( '.social-waypoint' ).each( function(i) {
+				var $el = $( this ),
+					animClassDown = $el.data( 'animateDown' ),
+					animClassUp = $el.data( 'animateUp' );
+
+				$el.waypoint( function( direction ) {
+					if( direction === 'down' && animClassDown ) {
+						$head.attr('class', 'social-media-icons ' + animClassDown);
+					}
+					else if( direction === 'up' && animClassUp ){
+						$head.attr('class', 'social-media-icons ' + animClassUp);
+					}
+				}, { offset: '100%' } );
+			} );
+        
+            var $head1 = $( '#ha-header' );
+			$( '.ha-waypoint' ).each( function(i) {
+				var $el1 = $( this ),
+					animClassDown = $el1.data( 'animateDown' ),
+					animClassUp = $el1.data( 'animateUp' );
+
+				$el1.waypoint( function( direction ) {
+					if( direction === 'down' && animClassDown ) {
+						$head1.attr('class', 'ha-header ' + animClassDown);
+					}
+					else if( direction === 'up' && animClassUp ){
+						$head1.attr('class', 'ha-header ' + animClassUp);
+					}
+				}, { offset: '100%' } );
+			} );
+        
+            var $payment = $('door-for-payments');
+            function door (a,b,c) {
+                var $a = $(this),
+                    animClassDown = $el1.data('animateDown'),
+                    
+            }
+		</script>
+</body>
+</html>
